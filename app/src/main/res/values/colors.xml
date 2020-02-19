@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorText_light">#E3EAE0</color>
+    <color name="colorText_dark">#384B42</color>
+    <color name="colorSatu">#50EDB1</color>
+    <color name="colorDua">#67AA8C</color>
+    <color name="colorTiga">#CDFBE4</color>
+    <color name="colorEmpat">#0054B4</color>
+    <color name="colorSatu_black">#2F4858</color>
 </resources>
