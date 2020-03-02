@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingY">7dp</dimen>
+    <dimen name="paddingX">19dp</dimen>
+    <dimen name="marginX">10dp</dimen>
+    <dimen name="marginY">4dp</dimen>
+    <dimen name="baseMargin">5dp</dimen>
+</resources>
