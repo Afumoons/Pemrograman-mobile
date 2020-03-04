@@ -5,4 +5,5 @@
     <dimen name="marginX">10dp</dimen>
     <dimen name="marginY">4dp</dimen>
     <dimen name="baseMargin">5dp</dimen>
+    <dimen name="baseMarginWide">17dp</dimen>
 </resources>
