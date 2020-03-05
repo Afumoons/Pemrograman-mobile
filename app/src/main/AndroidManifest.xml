@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.pemrograman_android.PhoneDetailActivity"
+            android:parentActivityName="com.example.pemrograman_android.MainActivity"></activity>
     </application>
 
 </manifest>
