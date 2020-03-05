@@ -19,13 +19,15 @@ class MainActivity : AppCompatActivity() {
     private fun phoneItemClicked(phoneItem:PhoneData){
         val showDetailActivityIntent= Intent(this,PhoneDetailActivity::class.java)
         showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT,phoneItem.phone.toString())
+        showDetailActivityIntent.putExtra(Intent.EXTRA_REFERRER,phoneItem.alamatEmail)
+        showDetailActivityIntent.putExtra(Intent.EXTRA_SPLIT_NAME,phoneItem.contactName)
         startActivity(showDetailActivityIntent)
     }
     private fun createPhoneData():List<PhoneData>{
         val partList=ArrayList<PhoneData>()
-        partList.add(PhoneData(933877,"Afu Sidhi Pamekas"))
-        partList.add(PhoneData(442134,"Nurrachman Budi Mulya"))
-        partList.add(PhoneData(756364,"Lutfi Cahyo Utomo"))
+        partList.add(PhoneData(933877,"Afu Sidhi Pamekas","afumoons@gmail.com"))
+        partList.add(PhoneData(442134,"Nurrachman Budi Mulya","budimulya@gmail.com"))
+        partList.add(PhoneData(756364,"Lutfi Cahyo Utomo","cahyo1133@gmail.com"))
         return partList
     }
 }
