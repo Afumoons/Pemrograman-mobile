@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Pemrograman_Android</string>
+    <string name="game_over">Game Over</string>
+    <string name="try_again">Try Again?</string>
+    <string name="android_trivia">Android Trivia</string>
+    <string name="submit_button">Submit</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="what_color_is_the_android_mascot">What color is the Android mascot?</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="next_match">Next Match</string>
+    <string name="play">Play</string>
+    <string name="titleabout">About</string>
+    <string name="titlerules">Rules</string>
+    <string name="gambar">Gambar</string>
 </resources>
