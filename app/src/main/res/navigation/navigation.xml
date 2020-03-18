@@ -25,10 +25,20 @@
             app:popUpTo="@+id/gameFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_gameFragment_to_gameWonFragment"
-            app:destination="@id/gameWonFragment"
-            app:popUpTo="@id/gameFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_gameFragment_to_gameFragment2"
+            app:destination="@id/gameFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.example.pemrograman_android.GameFragment2"
+        android:label="Game"
+        tools:layout="@layout/fragment_game2">
+        <action
+            android:id="@+id/action_gameFragment2_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+        <action
+            android:id="@+id/action_gameFragment2_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment"
@@ -52,5 +62,6 @@
             app:popUpTo="@+id/titleFragment"
             app:popUpToInclusive="false" />
     </fragment>
+
 
 </navigation>

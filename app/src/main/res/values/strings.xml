@@ -5,7 +5,8 @@
     <string name="android_trivia">Android Trivia</string>
     <string name="submit_button">Submit</string>
     <string name="congratulations">Congratulations!</string>
-    <string name="what_color_is_the_android_mascot">What color is the Android mascot?</string>
+    <string name="question1">Seorang pelari A yang berada di posisi 6 menyalip pelari B yang berada di posisi 5. Di posisi berapakah pelari A saat ini?</string>
+    <string name="question2">2+4/2-2=</string>
     <string name="red">Red</string>
     <string name="yellow">Yellow</string>
     <string name="green">Green</string>
@@ -15,4 +16,7 @@
     <string name="titleabout">About</string>
     <string name="titlerules">Rules</string>
     <string name="gambar">Gambar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -11,15 +11,12 @@ import com.example.pemrograman_android.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentGameWonBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
         binding.nextMatchButton.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_gameWonFragment_to_titleFragment)
+            view.findNavController().navigate(R.id.action_gameWonFragment_to_titleFragment)
         }
         return binding.root
     }

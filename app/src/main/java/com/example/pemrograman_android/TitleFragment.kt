@@ -11,19 +11,13 @@ import com.example.pemrograman_android.databinding.FragmentTitleBinding
 
 class TittleFragment : Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(
-            inflater,
-            R.layout.fragment_title,
-            container,
-            false
+            inflater, R.layout.fragment_title, container, false
         )
         binding.playButton.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_titleFragment_to_gameFragment)
+            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
         return binding.root
     }

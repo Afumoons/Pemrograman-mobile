@@ -7,16 +7,14 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.pemrograman_android.databinding.FragmentGameBinding
+import com.example.pemrograman_android.databinding.FragmentGame2Binding
 
-class GameFragment : Fragment() {
+class GameFragment2 : Fragment() {
     override fun onCreateView(
-        inflater:
-        LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentGameBinding>(
-            inflater, R.layout.fragment_game, container, false
+        val binding = DataBindingUtil.inflate<FragmentGame2Binding>(
+            inflater, R.layout.fragment_game2, container, false
         )
         binding.submitButton.setOnClickListener { view: View ->
             salah()
@@ -28,16 +26,19 @@ class GameFragment : Fragment() {
             salah()
         }
         binding.submitButton4.setOnClickListener { view: View ->
+            salah()
+        }
+        binding.textView.setOnClickListener { view: View ->
             benar()
         }
         return binding.root
     }
 
     private fun salah() {
-        view?.findNavController()?.navigate(R.id.action_gameFragment_to_gameOverFragment)
+        view?.findNavController()?.navigate(R.id.action_gameFragment2_to_gameOverFragment)
     }
 
     private fun benar() {
-        view?.findNavController()?.navigate(R.id.action_gameFragment_to_gameFragment2)
+        view?.findNavController()?.navigate(R.id.action_gameFragment2_to_gameWonFragment)
     }
 }
