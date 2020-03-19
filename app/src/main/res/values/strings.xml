@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Pemrograman_Android</string>
-</resources>
+    <string name="app_name">Profile Fakultas UPN</string>
+    <string name="deskripsi_gambar">Gambar</string>
+  </resources>

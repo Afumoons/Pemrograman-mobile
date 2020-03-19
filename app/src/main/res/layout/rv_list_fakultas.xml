@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/imgMakanan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/deskripsi_gambar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Resep"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
