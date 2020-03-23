@@ -19,6 +19,12 @@
             android:name="com.example.pemrograman_android.FakultasDetailActivity"
             android:label="Detail Resep"
             android:parentActivityName="com.example.pemrograman_android.MainActivity"></activity>
+        <activity
+            android:name="com.example.pemrograman_android.FakultasWeb"
+            android:label="Web Fakultas"
+            android:parentActivityName="com.example.pemrograman_android.FakultasDetailActivity"></activity>
     </application>
 
+    <!--Untuk izin internet-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

@@ -42,7 +42,7 @@
                     android:layout_gravity="start"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="Nama Resep"
+                    android:text="Nama "
                     android:textAlignment="gravity"
                     android:textColor="@color/colorAccent"
                     android:textSize="18sp" />
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginTop="50dp"
-                android:text="Detail Bahan"
+                android:text="Detail Deskripsi"
                 android:textSize="12sp" />
 
             <TextView
@@ -62,10 +62,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                android:text="cara Resep"
+                android:layout_marginTop="10dp"
+                android:text="Detail Bullet"
                 android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_label_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="12dp"
+                android:text="Email"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="username@email.com"
+                android:textColor="#0064DF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_label_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="12dp"
+                android:text="Web"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="https://website.com"
+                android:textColor="#0064DF"
+                android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>
 

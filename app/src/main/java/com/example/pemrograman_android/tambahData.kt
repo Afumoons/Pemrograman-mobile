@@ -11,7 +11,9 @@ fun tambahData(): List<FakultasData> {
             "1. Prodi S1 Ekonomi Pembangunan\n" +
                     "2. Prodi S1 Akuntansi\n" +
                     "3. Prodi S1 Manajemen",
-            R.drawable.logoupn
+            R.drawable.logo_afumoons_svg,
+            "",
+            ""
         )
     )
     partList.add(
@@ -20,7 +22,9 @@ fun tambahData(): List<FakultasData> {
             "Fakultas Pertanian merupakan salah satu dari 7 Fakultas di UPN “Veteran” Jawa Timur. Yang terdiri dari program studi:",
             "1. Prodi S1 Agroteknologi\n" +
                     "2. Prodi S1 Agribisnis",
-            R.drawable.logoupn
+            R.drawable.logo_afumoons_svg,
+        "",
+        ""
         )
     )
     partList.add(
@@ -32,7 +36,9 @@ fun tambahData(): List<FakultasData> {
                     "3. Prodi S1 Teknik Sipil\n" +
                     "4. Prodi S1 Teknik Lingkungan\n" +
                     "5. Prodi S1 Teknologi Pangan",
-            R.drawable.logoupn
+            R.drawable.logo_afumoons_svg,
+        "",
+            ""
         )
     )
     partList.add(
@@ -42,21 +48,23 @@ fun tambahData(): List<FakultasData> {
             "1. Prodi S1 Teknik Informatika\n" +
                     "2. Prodi S1 Sistem Informasi\n" +
                     "3. Prodi S1 Data Sains",
-            R.drawable.logoupn
+            R.drawable.logo_afumoons_svg,
+            "",
+            ""
         )
     )
     partList.add(
         FakultasData(
-            "Afu Sidhi Pamekas",
+            "Pembuat Aplikasi",
             "Mahasiswa UPN “Veteran” Jawa Timur Fakultas Ilmu Komputer Prodi Sistem Informasi",
             "Nama \t: Afu Sidhi Pamekas\n" +
                     "TTL\t: Bangkalan, 12 Agustus 1998\n" +
                     "Alamat \t: Jl. Trunojoyo Asri Blok G No. 2 Burneh Bangkalan\n" +
-                    "No. HP \t: 087742212442\n" +
-                    "Email\t: afumoons@gmail.com \n" +
-                    "URL Github\t: github.com/afumoons\n" +
+                    "No. HP \t: 087742212442" +
                     "URL Profile\t: afumoons.github.io\n",
-            R.drawable.afumoons
+            R.drawable.logo_afumoons_svg,
+            "afumoons@gmail.com",
+            "https://github.com/afumoons/"
         )
     )
     return partList
