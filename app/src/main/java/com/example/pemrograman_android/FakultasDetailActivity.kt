@@ -45,16 +45,49 @@ class FakultasDetailActivity : AppCompatActivity() {
         if (partEmail == "") {
             tv_detail_email.text = ""
             tv_detail_label_email.text = ""
+        }else {
+            tv_detail_email.text=partEmail
         }
         if (partWeb == "") {
             tv_detail_web.text = ""
             tv_detail_label_web.text = ""
+        }else{
+            tv_detail_web.text=partWeb
+        }
+
+        tv_detail_email.setOnClickListener {
+            //Jalankan function klikWeb dengan parameter partWeb
+            klikEmail(partEmail)
         }
 
         tv_detail_web.setOnClickListener {
             //Jalankan function klikWeb dengan parameter partWeb
             klikWeb(partWeb)
         }
+    }
+
+    private fun klikEmail(email:String){
+        //ACTION_SEND untuk menjalankan email client yang terinstall pada perangkat Android
+        val mailIntent = Intent(Intent.ACTION_SEND)
+        /*Untuk mengirim email memberikan mailto: sebagai URI menggunakan method setData()
+        dan type data text/plain menggunakan method setType()*/
+        mailIntent.data = Uri.parse("mailto:")
+        mailIntent.type = "text/plain"
+
+        //Memasukkan penerima / to pada intent
+        /* penerima menggunakan array karena email dapat dikirim ke beberapa penerima
+           jadi berikan koma(,) untuk memisahkan email, akan tersimpan sebagai array*/
+        mailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+        //Memasukkan subject pada intent
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email dari aplikasi")
+        //Memasukkan text email pada intent
+        mailIntent.putExtra(Intent.EXTRA_TEXT, "Coba email")
+
+        /*NB lihat file Intent.java dengan cara Ctrl+klik kiri pada EXTRA_TEXT dll untuk melihat
+        fungsi masing masing EXTRA_blabla*/
+
+        //start email intent
+        startActivity(Intent.createChooser(mailIntent, "Pilih Email Client..."))
     }
 
     //Function klikWeb ketika tv_detail_web diklik -> parameter url yang akan ditampilkan
