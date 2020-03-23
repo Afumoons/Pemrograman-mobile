@@ -9,7 +9,6 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_web.*
 
 class FakultasWeb : AppCompatActivity() {
     //Mengaktifkan JavaScript
@@ -58,7 +57,6 @@ class FakultasWeb : AppCompatActivity() {
             webView.loadUrl(partWeb)
         }
     }
-
 
 
 }

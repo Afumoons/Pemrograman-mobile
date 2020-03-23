@@ -1,7 +1,5 @@
 package com.example.pemrograman_android
 
-import android.provider.ContactsContract
-
 //Format List FakultasData
 data class FakultasData(
     val namaFakultas: String,
@@ -10,6 +8,6 @@ data class FakultasData(
     // Type data image Int karena type R.drawable.[nama_resource] berupa Integer
     val image: Int,
     val email: String,
-    val web:String
+    val web: String
 )
 

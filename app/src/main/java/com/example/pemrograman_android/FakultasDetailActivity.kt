@@ -45,14 +45,14 @@ class FakultasDetailActivity : AppCompatActivity() {
         if (partEmail == "") {
             tv_detail_email.text = ""
             tv_detail_label_email.text = ""
-        }else {
-            tv_detail_email.text=partEmail
+        } else {
+            tv_detail_email.text = partEmail
         }
         if (partWeb == "") {
             tv_detail_web.text = ""
             tv_detail_label_web.text = ""
-        }else{
-            tv_detail_web.text=partWeb
+        } else {
+            tv_detail_web.text = partWeb
         }
 
         tv_detail_email.setOnClickListener {
@@ -66,7 +66,7 @@ class FakultasDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun klikEmail(email:String){
+    private fun klikEmail(email: String) {
         //ACTION_SEND untuk menjalankan email client yang terinstall pada perangkat Android
         val mailIntent = Intent(Intent.ACTION_SEND)
         /*Untuk mengirim email memberikan mailto: sebagai URI menggunakan method setData()

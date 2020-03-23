@@ -22,7 +22,7 @@
             android:id="@+id/tv_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Resep"
+            android:text="Nama Fakultas"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
