@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Profile Fakultas UPN</string>
     <string name="deskripsi_gambar">Gambar</string>
-  </resources>
+    <string name="nama_fakultas">Nama Fakultas</string>
+    <string name="detail_deskripsi">Detail Deskripsi</string>
+    <string name="detail_bullet">Detail Bullet</string>
+    <string name="email">Email</string>
+    <string name="contoh_email">username@email.com</string>
+    <string name="web">Web</string>
+    <string name="contoh_web">https://website.com</string>
+</resources>

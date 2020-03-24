@@ -45,6 +45,8 @@ class FakultasDetailActivity : AppCompatActivity() {
         if (partEmail == "") {
             tv_detail_email.text = ""
             tv_detail_label_email.text = ""
+            tv_detail_email.height = 0
+            tv_detail_label_email.height = 0
         } else {
             tv_detail_email.text = partEmail
         }
@@ -90,7 +92,7 @@ class FakultasDetailActivity : AppCompatActivity() {
         startActivity(Intent.createChooser(mailIntent, "Pilih Email Client..."))
     }
 
-    //Function klikWeb ketika tv_detail_web diklik -> parameter url yang akan ditampilkan
+    //Function klikWeb ketika tv_detail_web diklik -> parameter url yang akan ditampilkan di webView
     private fun klikWeb(url: String) {
         val showWebActivity = Intent(this, FakultasWeb::class.java)
 
