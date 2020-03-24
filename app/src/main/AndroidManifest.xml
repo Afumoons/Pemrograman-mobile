@@ -25,6 +25,6 @@
             android:parentActivityName="com.example.pemrograman_android.FakultasDetailActivity"></activity>
     </application>
 
-    <!--Untuk izin internet-->
+    <!--Untuk izin internet dan untuk perbaikan ERR_CACHE_MISS-->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
