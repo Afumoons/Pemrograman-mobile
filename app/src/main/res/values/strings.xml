@@ -3,6 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Haloo">Haloo Dunia!</string>
-    <string name="tab_text_1">Text1!</string>
-    <string name="tab_text_2">Text2!</string>
+    <string name="Lorem">Lorem ipsum dolor sit amet!</string>
+    <string name="tab_text_1">Input</string>
+    <string name="tab_text_2">Tab Nama</string>
+    <string name="tab_text_3">Tab Text</string>
 </resources>

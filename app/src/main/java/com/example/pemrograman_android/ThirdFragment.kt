@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
-class SecondFragment : Fragment() {
+class ThirdFragment : Fragment() {
     private var communicationViewModel: CommunicationViewModel? = null
-    private var txtName: TextView? = null
+    private var txtDesc: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         communicationViewModel =
@@ -21,23 +21,21 @@ class SecondFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(
-            R.layout.fragment_second, container, false
-        )
+        return inflater.inflate(R.layout.fragment_third, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        txtName = view.findViewById(R.id.textViewName)
-        //Mengubah value txtName.text sesuai variable name dari comminicationViewModel
-        communicationViewModel!!.name.observe(requireActivity(),
-            Observer { s -> txtName!!.text = s })
+        txtDesc = view.findViewById(R.id.textViewDesc)
+        //Mengubah value txtDesc.text sesuai variable desc dari comminicationViewModel
+        communicationViewModel!!.desc.observe(requireActivity(),
+            Observer { s -> txtDesc!!.text = s })
     }
 
     //Menjalankan instance fragment
     companion object {
-        fun newInstance(): SecondFragment {
-            return SecondFragment()
+        fun newInstance(): ThirdFragment {
+            return ThirdFragment()
         }
     }
 }
