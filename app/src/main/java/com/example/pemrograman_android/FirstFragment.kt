@@ -30,18 +30,20 @@ class FirstFragment : Fragment() {
         setnamewhentextchanged(view.findViewById<TextInputEditText>(R.id.textInputTextName), "Name")
         // descEditText
         setnamewhentextchanged(view.findViewById<TextInputEditText>(R.id.textInputTextDesc), "Desc")
-
+        // webEditText
+        setnamewhentextchanged(view.findViewById<TextInputEditText>(R.id.textInputTextWeb), "Web")
     }
 
-    fun setnamewhentextchanged(txtinput: TextInputEditText, type: String) {
+    private fun setnamewhentextchanged(txtinput: TextInputEditText, type: String) {
         txtinput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
-
             override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
                 if (type == "Name") {
                     communicationViewModel!!.setName(charSequence.toString())
                 } else if (type == "Desc") {
                     communicationViewModel!!.setDesc(charSequence.toString())
+                } else if (type == "Web") {
+                    communicationViewModel!!.setWeb(charSequence.toString())
                 }
             }
 

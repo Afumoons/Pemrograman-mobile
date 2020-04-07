@@ -10,12 +10,19 @@ class ViewPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
     //Menambahkan item fragment pada tab
     override fun getItem(position: Int): Fragment {
-        return if (position == 0) {
-            FirstFragment.newInstance()
-        } else if (position == 1) {
-            SecondFragment.newInstance()
-        } else {
-            ThirdFragment.newInstance()
+        return when (position) {
+            0 -> {
+                FirstFragment.newInstance()
+            }
+            1 -> {
+                SecondFragment.newInstance()
+            }
+            2 -> {
+                ThirdFragment.newInstance()
+            }
+            else -> {
+                FourthFragment.newInstance()
+            }
         }
     }
 
@@ -26,7 +33,7 @@ class ViewPagerAdapter(private val mContext: Context, fm: FragmentManager) :
 
     //Jumlah tab fragment
     override fun getCount(): Int {
-        return 3
+        return 4
     }
 
     companion object {
@@ -35,7 +42,8 @@ class ViewPagerAdapter(private val mContext: Context, fm: FragmentManager) :
         private val TAB_TITLES = intArrayOf(
             R.string.tab_text_1,
             R.string.tab_text_2,
-            R.string.tab_text_3
+            R.string.tab_text_3,
+            R.string.tab_text_4
         )
     }
 }
