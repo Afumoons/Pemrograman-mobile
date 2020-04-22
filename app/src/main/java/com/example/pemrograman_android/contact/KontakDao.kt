@@ -3,6 +3,7 @@ package com.example.pemrograman_android.contact
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+
 @Dao
 interface KontakDao {
     @Insert

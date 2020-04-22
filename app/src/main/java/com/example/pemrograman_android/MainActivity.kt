@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 kontakViewModel.delete(adapter.getKontakAt(viewHolder.adapterPosition))
-                Toast.makeText(baseContext, "Catatan dihapus!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Kontak dihapus!", Toast.LENGTH_SHORT).show()
             }
         }).attachToRecyclerView(recycler_view)
 
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         return when (item?.itemId) {
             R.id.delete_all_kontak -> {
                 kontakViewModel.deleteAllKontak()
-                Toast.makeText(this, "Semua sudah dihapus!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Semua kontak sudah dihapus!", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> {
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
                 data.getIntExtra(AddEditKontakActivity.EXTRA_PRIORITAS, 1)
             )
             kontakViewModel.insert(newKontak)
-            Toast.makeText(this, "Catatan disimpan!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Kontak disimpan!", Toast.LENGTH_SHORT).show()
         } else if (requestCode == EDIT_KONTAK_REQUEST && resultCode == Activity.RESULT_OK) {
             val id = data?.getIntExtra(AddEditKontakActivity.EXTRA_ID, -1)
             if (id == -1) {
@@ -116,10 +116,11 @@ class MainActivity : AppCompatActivity() {
                 data.getStringExtra(AddEditKontakActivity.EXTRA_CATATAN),
                 data.getIntExtra(AddEditKontakActivity.EXTRA_PRIORITAS, 1)
             )
+            Toast.makeText(this, "Kontak diupdate!", Toast.LENGTH_SHORT).show()
             updateKontak.id = data.getIntExtra(AddEditKontakActivity.EXTRA_ID, -1)
             kontakViewModel.update(updateKontak)
         } else {
-            Toast.makeText(this, "Catatan tidak disimpan!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Kontak tidak disimpan!", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -31,7 +31,7 @@ class AddEditKontakActivity : AppCompatActivity() {
 
         // Menampilkan menu layout ketika edit berdasarkan Intent
         if (intent.hasExtra(EXTRA_ID)) {
-            title = "Edit Catatan"
+            title = "Edit Kontak"
             ti_nama_d.setText(intent.getStringExtra(EXTRA_NAMA_D))
             ti_nama_b.setText(intent.getStringExtra(EXTRA_NAMA_B))
             ti_notelp.setText(intent.getStringExtra(EXTRA_NOTELP))
@@ -39,7 +39,7 @@ class AddEditKontakActivity : AppCompatActivity() {
             ti_catatan.setText(intent.getStringExtra(EXTRA_CATATAN))
             number_picker_priority.value = intent.getIntExtra(EXTRA_PRIORITAS, 1)
         } else {
-            title = "Tambah Catatan"
+            title = "Tambah Kontak"
         }
     }
 
@@ -63,7 +63,7 @@ class AddEditKontakActivity : AppCompatActivity() {
     // Menyimpan kontak
     private fun saveKontak() {
         if (ti_nama_d.text.toString().trim().isBlank() || ti_notelp.text.toString().trim().isBlank()) {
-            Toast.makeText(this, "Catatan kosong!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Isian kosong!", Toast.LENGTH_SHORT).show()
             return
         }
         val data = Intent().apply {

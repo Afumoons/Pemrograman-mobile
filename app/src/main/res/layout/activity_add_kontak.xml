@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/card"
                     android:hint="@string/txt_nama_d"
-                    android:textColor="@color/tulisan_gelap"/>
+                    android:textColor="@color/tulisan_gelap" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/card"
                     android:hint="@string/txt_nama_b"
-                    android:textColor="@color/tulisan_gelap"/>
+                    android:textColor="@color/tulisan_gelap" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/card"
                     android:hint="@string/txt_notelp"
-                    android:textColor="@color/tulisan_gelap"/>
+                    android:textColor="@color/tulisan_gelap" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/card"
                     android:hint="@string/txt_email"
-                    android:textColor="@color/tulisan_gelap"/>
+                    android:textColor="@color/tulisan_gelap" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/card"
                     android:hint="@string/txt_catatan"
-                    android:textColor="@color/tulisan_gelap"/>
+                    android:textColor="@color/tulisan_gelap" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <NumberPicker
@@ -120,8 +120,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginTop="375dp"
-                android:fontFamily="sans-serif"
                 android:background="@color/card"
+                android:fontFamily="sans-serif"
                 android:text="@string/txt_prioritas"
                 android:textAppearance="@android:style/TextAppearance.Medium"
                 android:textColor="@color/tulisan_gelap"

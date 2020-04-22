@@ -13,13 +13,16 @@ import kotlinx.android.synthetic.main.kontak_item.view.*
 class KontakAdapter : ListAdapter<Kontak, KontakAdapter.KontakHolder>(DIFF_CALLBACK) {
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Kontak>() {
+            // Mencari apakah item lama dan item baru sama
             override fun areItemsTheSame(oldItem: Kontak, newItem: Kontak): Boolean {
                 return oldItem.id == newItem.id
             }
 
+            // // Mencari apakah item content dan content baru di item tersebut sama
             override fun areContentsTheSame(oldItem: Kontak, newItem: Kontak): Boolean {
                 return oldItem.nama_d == newItem.nama_d && oldItem.nama_b == newItem.nama_b
-                        && oldItem.priority == newItem.priority
+                        && oldItem.priority == newItem.priority && oldItem.notelp == newItem.notelp
+                        && oldItem.email == newItem.email && oldItem.catatan == newItem.catatan
             }
         }
     }
@@ -54,6 +57,7 @@ class KontakAdapter : ListAdapter<Kontak, KontakAdapter.KontakHolder>(DIFF_CALLB
                 }
             }
         }
+
         var textViewNamad: TextView = itemView.tv_nama_d
         var textViewNamab: TextView = itemView.tv_nama_b
         var textViewNotelp: TextView = itemView.tv_notelp
