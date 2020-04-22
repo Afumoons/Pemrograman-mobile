@@ -3,4 +3,20 @@
     <string name="hint_word">Kata...</string>
     <string name="button_save">Simpan</string>
     <string name="empty_not_saved">Kata tidak dapat disimpan karena kosong.</string>
+    <string name="txt_delete_all">Delete Semua</string>
+    <string name="txt_simpan">Simpan</string>
+    <string name="txt_nama_d">Nama Depan</string>
+    <string name="txt_phone_number">Masukkan Nomor Telepon</string>
+    <string name="txt_email">Email Kontak</string>
+    <string name="txt_prioritas">Prioritas</string>
+    <string name="txt_angka_prioritas">2</string>
+    <string name="txt_nama_b">Nama Belakang</string>
+    <string name="txt_notelp">Nomor Telepon</string>
+    <string name="txt_catatan">Catatan Kontak</string>
+    <string name="txt_item_namad">Upin</string>
+    <string name="txt_item_prioritas">5</string>
+    <string name="txt_item_namab">Ipin</string>
+    <string name="txt_item_notelp">087742212442</string>
+    <string name="txt_item_email">contoh@email.com</string>
+    <string name="txt_item_catatan">Sayangkuu</string>
 </resources>

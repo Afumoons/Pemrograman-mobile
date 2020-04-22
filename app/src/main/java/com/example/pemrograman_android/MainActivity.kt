@@ -12,31 +12,30 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pemrograman_android.catatan.Note
+import com.example.pemrograman_android.contact.Kontak
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        const val ADD_NOTE_REQUEST = 1
-        const val EDIT_NOTE_REQUEST = 2
+        const val ADD_KONTAK_REQUEST = 1
+        const val EDIT_KONTAK_REQUEST = 2
     }
 
-    private lateinit var noteViewModel: NoteViewModel
+    private lateinit var kontakViewModel: KontakViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        buttonAddNote.setOnClickListener {
+        buttonAddKontak.setOnClickListener {
             startActivityForResult(
-                Intent(this, AddEditNoteActivity::class.java),
-                ADD_NOTE_REQUEST
+                Intent(this, AddEditKontakActivity::class.java), ADD_KONTAK_REQUEST
             )
         }
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
-        val adapter = NoteAdapter()
+        val adapter = KontakAdapter()
         recycler_view.adapter = adapter
-        noteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
-        noteViewModel.getAllNotes().observe(this, Observer<List<Note>> {
+        kontakViewModel = ViewModelProviders.of(this).get(KontakViewModel::class.java)
+        kontakViewModel.getAllKontak().observe(this, Observer<List<Kontak>> {
             adapter.submitList(it)
         })
         ItemTouchHelper(object :
@@ -50,20 +49,24 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                noteViewModel.delete(adapter.getNoteAt(viewHolder.adapterPosition))
+                kontakViewModel.delete(adapter.getKontakAt(viewHolder.adapterPosition))
                 Toast.makeText(baseContext, "Catatan dihapus!", Toast.LENGTH_SHORT).show()
             }
-        }
-        ).attachToRecyclerView(recycler_view)
+        }).attachToRecyclerView(recycler_view)
 
-        adapter.setOnItemClickListener(object : NoteAdapter.OnItemClickListener {
-            override fun onItemClick(note: Note) {
-                val intent = Intent(baseContext, AddEditNoteActivity::class.java)
-                intent.putExtra(AddEditNoteActivity.EXTRA_ID, note.id)
-                intent.putExtra(AddEditNoteActivity.EXTRA_JUDUL, note.title)
-                intent.putExtra(AddEditNoteActivity.EXTRA_DESKRIPSI, note.description)
-                intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITAS, note.priority)
-                startActivityForResult(intent, EDIT_NOTE_REQUEST)
+        adapter.setOnItemClickListener(object : KontakAdapter.OnItemClickListener {
+
+            // Ketika item diklik masuk ke edit dengan mengirimkan Intent
+            override fun onItemClick(kontak: Kontak) {
+                val intent = Intent(baseContext, AddEditKontakActivity::class.java)
+                intent.putExtra(AddEditKontakActivity.EXTRA_ID, kontak.id)
+                intent.putExtra(AddEditKontakActivity.EXTRA_NAMA_D, kontak.nama_d)
+                intent.putExtra(AddEditKontakActivity.EXTRA_NAMA_B, kontak.nama_b)
+                intent.putExtra(AddEditKontakActivity.EXTRA_NOTELP, kontak.notelp)
+                intent.putExtra(AddEditKontakActivity.EXTRA_EMAIL, kontak.email)
+                intent.putExtra(AddEditKontakActivity.EXTRA_CATATAN, kontak.catatan)
+                intent.putExtra(AddEditKontakActivity.EXTRA_PRIORITAS, kontak.priority)
+                startActivityForResult(intent, EDIT_KONTAK_REQUEST)
             }
         })
     }
@@ -73,10 +76,11 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    // Tombol delete all diklik
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return when (item?.itemId) {
-            R.id.delete_all_notes -> {
-                noteViewModel.deleteAllNotes()
+            R.id.delete_all_kontak -> {
+                kontakViewModel.deleteAllKontak()
                 Toast.makeText(this, "Semua sudah dihapus!", Toast.LENGTH_SHORT).show()
                 true
             }
@@ -88,26 +92,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
-            val newNote = Note(
-                data!!.getStringExtra(AddEditNoteActivity.EXTRA_JUDUL),
-                data.getStringExtra(AddEditNoteActivity.EXTRA_DESKRIPSI),
-                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1)
+        if (requestCode == ADD_KONTAK_REQUEST && resultCode == Activity.RESULT_OK) {
+            val newKontak = Kontak(
+                data!!.getStringExtra(AddEditKontakActivity.EXTRA_NAMA_D),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_NAMA_B),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_NOTELP),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_EMAIL),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_CATATAN),
+                data.getIntExtra(AddEditKontakActivity.EXTRA_PRIORITAS, 1)
             )
-            noteViewModel.insert(newNote)
+            kontakViewModel.insert(newKontak)
             Toast.makeText(this, "Catatan disimpan!", Toast.LENGTH_SHORT).show()
-        } else if (requestCode == EDIT_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
-            val id = data?.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
+        } else if (requestCode == EDIT_KONTAK_REQUEST && resultCode == Activity.RESULT_OK) {
+            val id = data?.getIntExtra(AddEditKontakActivity.EXTRA_ID, -1)
             if (id == -1) {
                 Toast.makeText(this, "Pembaharuan gagal!", Toast.LENGTH_SHORT).show()
             }
-            val updateNote = Note(
-                data!!.getStringExtra(AddEditNoteActivity.EXTRA_JUDUL),
-                data.getStringExtra(AddEditNoteActivity.EXTRA_DESKRIPSI),
-                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1)
+            val updateKontak = Kontak(
+                data!!.getStringExtra(AddEditKontakActivity.EXTRA_NAMA_D),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_NAMA_B),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_NOTELP),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_EMAIL),
+                data.getStringExtra(AddEditKontakActivity.EXTRA_CATATAN),
+                data.getIntExtra(AddEditKontakActivity.EXTRA_PRIORITAS, 1)
             )
-            updateNote.id = data.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
-            noteViewModel.update(updateNote)
+            updateKontak.id = data.getIntExtra(AddEditKontakActivity.EXTRA_ID, -1)
+            kontakViewModel.update(updateKontak)
         } else {
             Toast.makeText(this, "Catatan tidak disimpan!", Toast.LENGTH_SHORT).show()
         }

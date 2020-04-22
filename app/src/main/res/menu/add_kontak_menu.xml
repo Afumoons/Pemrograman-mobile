@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/save_note"
-        android:icon="@drawable/ic_add_black_24dp"
-        android:title="Simpan"
-        app:showAsAction="ifRoom"></item>
+        android:id="@+id/save_kontak"
+        android:icon="@drawable/button_save_white"
+        android:title="@string/txt_simpan"
+        app:showAsAction="ifRoom" />
 </menu>

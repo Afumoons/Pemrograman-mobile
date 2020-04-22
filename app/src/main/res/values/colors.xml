@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8DF388</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#A53C7D</color>
+    <color name="colorPrimary">#F06292</color>
+    <color name="colorPrimaryDark">#E1BEE7</color>
+    <color name="colorAccent">#F48FB1</color>
     <color name="buttonLabel">#414656</color>
-    <color name="background">#00CFEE</color>
-    <color name="recycleritem">#8DF388</color>
+    <color name="background">#FCE4EC</color>
+    <color name="card">#F8BBD0</color>
+    <color name="tulisan_gelap">#2C0419</color>
 </resources>
