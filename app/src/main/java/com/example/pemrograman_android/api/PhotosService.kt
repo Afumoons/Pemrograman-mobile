@@ -11,10 +11,10 @@ class PhotosService {
     private val api: PhotosApi
 
     init {
-        api = Retrofit.Builder().baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build().create(PhotosApi::class.java)
+        api =
+            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
+                .create(PhotosApi::class.java)
     }
 
     fun getPhotos(): Single<List<Photo>> {

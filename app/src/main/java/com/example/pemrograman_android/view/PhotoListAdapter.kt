@@ -10,7 +10,7 @@ import com.example.pemrograman_android.model.Photo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class PhotoListAdapter(var photos: ArrayList<Photo>) :
+class PhotoListAdapter(private var photos: ArrayList<Photo>) :
     RecyclerView.Adapter<PhotoListAdapter.ViewHolder>() {
 
     fun updatePhotos(newPhotos: List<Photo>) {
@@ -33,7 +33,7 @@ class PhotoListAdapter(var photos: ArrayList<Photo>) :
         fun bind(photos: Photo) {
             itemView.tvTitle.text = photos.title
             itemView.body.text = photos.body
-            itemView.setOnClickListener { view ->
+            itemView.setOnClickListener {
                 Toast.makeText(itemView.context, "Hello", Toast.LENGTH_LONG).show()
             }
             Picasso.get().load(photos.thumbnail).into(itemView.imageView)

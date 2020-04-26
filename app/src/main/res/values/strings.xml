@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Pemrograman_Android</string>
-    <string name="imagename">Imagename</string>
+    <string name="ContentDescription">User Avatar</string>
+    <string name="txttitle">Title</string>
+    <string name="txtimagename">Imagename</string>
+    <string name="txturl">URL</string>
+    <string name="txturlitem">TextView</string>
 </resources>
