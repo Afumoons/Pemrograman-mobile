@@ -1,7 +1,3 @@
-![Android](https://www.android.com/static/2016/img/share/andy-sm.png "Gambar Android")
+# MDC-101 for Material Components for Android (Kotlin)
 
-# Kumpulan tugas mata kuliah Pemrograman Mobile
-
-NPM 17082010033
-
-Nama Afu Sidhi Pamekas
+Contains starter code structure for the MDC-101 Kotlin codelab.
