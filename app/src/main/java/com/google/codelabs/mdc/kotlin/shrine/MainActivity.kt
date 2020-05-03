@@ -11,10 +11,7 @@ class MainActivity : AppCompatActivity(), NavigationHost {
         setContentView(R.layout.shr_main_activity)
 
         if (savedInstanceState == null) {
-            supportFragmentManager
-                    .beginTransaction()
-                    .add(R.id.container, LoginFragment())
-                    .commit()
+            supportFragmentManager.beginTransaction().add(R.id.container, LoginFragment()).commit()
         }
     }
 
@@ -25,14 +22,12 @@ class MainActivity : AppCompatActivity(), NavigationHost {
      * @param addToBackstack Whether or not the current fragment should be added to the backstack.
      */
     override fun navigateTo(fragment: Fragment, addToBackstack: Boolean) {
-        val transaction = supportFragmentManager
-                .beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
 
         if (addToBackstack) {
             transaction.addToBackStack(null)
         }
-
         transaction.commit()
     }
 }

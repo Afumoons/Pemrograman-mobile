@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.shr_login_fragment.*
 import kotlinx.android.synthetic.main.shr_login_fragment.view.*
-import kotlinx.android.synthetic.main.shr_login_fragment.view.password_edit_text
 
 /**
  * Fragment representing the login screen for Shrine.
@@ -48,5 +47,3 @@ class LoginFragment : Fragment() {
         return text != null && text.length >= 8
     }
 }
-
-

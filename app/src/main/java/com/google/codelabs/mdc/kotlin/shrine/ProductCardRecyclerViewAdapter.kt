@@ -10,7 +10,7 @@ import com.google.codelabs.mdc.kotlin.shrine.network.ProductEntry
 /**
  * Adapter used to show a simple grid of products.
  */
-class ProductCardRecyclerViewAdapter(private val productList: List<ProductEntry>) : RecyclerView.Adapter<ProductCardViewHolder>() {
+class ProductCardRecyclerViewAdapter internal constructor(private val productList: List<ProductEntry>) : RecyclerView.Adapter<ProductCardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCardViewHolder {
         val layoutView = LayoutInflater.from(parent.context).inflate(R.layout.shr_product_card, parent, false)
